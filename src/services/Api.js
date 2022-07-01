@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'https://strapi.myidea.fr',
+  baseURL: 'https://fr.dofus.dofapi.fr',
   headers: {
     'Content-Type': 'application/json',
     Accept: 'application/json'
@@ -9,27 +9,18 @@ const api = axios.create({
   timeout: 10000
 })
 
-const getRestaurants = async () => {
+const getPets = async () => {
   try {
-    const response = await api.get('/restaurants')
+    const response = await api.get('/pets')
     return response.data
   } catch (error) {
     console.error(error)
   }
 }
 
-const getRestaurantById = async (id) => {
+const getPetById = async (id) => {
   try {
-    const response = await api.get(`/restaurants/${id}`)
-    return response.data
-  } catch (error) {
-    console.error(error)
-  }
-}
-
-const loginUser = async (credentials) => {
-  try {
-    const response = await api.post('/auth/local', credentials)
+    const response = await api.get(`/pets/${id}`)
     return response.data
   } catch (error) {
     console.error(error)
@@ -37,7 +28,6 @@ const loginUser = async (credentials) => {
 }
 
 export {
-  getRestaurants,
-  getRestaurantById,
-  loginUser
+  getPets,
+  getPetById
 }

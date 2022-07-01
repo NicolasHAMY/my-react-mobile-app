@@ -1,7 +1,5 @@
 import { Image, Text, useWindowDimensions, View } from 'react-native'
-import styles from './style/DishesStyle'
-
-const STRAPI_URL = 'https://strapi.myidea.fr'
+import styles from './style/StatStyle'
 
 const ItemSeparator = () => {
   return (
@@ -15,7 +13,7 @@ const ItemSeparator = () => {
   )
 }
 
-function DishesListItem ({ plat }) {
+function StatsListItem ({ pet }) {
   const SCREEN_WIDTH = useWindowDimensions().width
 
   return (
@@ -27,21 +25,18 @@ function DishesListItem ({ plat }) {
     >
       <ItemSeparator />
       <View style={styles.dishesCard}>
-        {plat.photos[0] &&
+        {pet.imgUrl &&
           <Image
             style={styles.image}
-            source={{ uri: `${STRAPI_URL}${plat.photos[0]?.url}` }}
+            source={{ uri: pet.imgUrl }}
             resizeMode='cover'
           />}
         <View style={styles.cardFooter}>
           <Text style={styles.cardTitle}>
-            {plat.nom}
+            {pet.name}
           </Text>
           <Text style={styles.description}>
-            {plat.description}
-          </Text>
-          <Text style={styles.description}>
-            {plat.price.toFixed(2)} €
+            {pet.description}
           </Text>
         </View>
       </View>
@@ -50,4 +45,4 @@ function DishesListItem ({ plat }) {
   )
 }
 
-export default DishesListItem
+export default StatsListItem

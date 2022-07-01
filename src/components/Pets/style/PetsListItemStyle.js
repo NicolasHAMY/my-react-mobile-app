@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native'
-import colors from '../../../style/Colors'
 import texts from '../../../style/Texts'
 
 export default StyleSheet.create({

@@ -7,6 +7,10 @@ const texts = StyleSheet.create({
     fontWeight: 'bold',
     color: colors.secondary
   },
+  cardSubTitle: {
+    fontSize: 22,
+    color: colors.secondary
+  },
   description: {
     fontSize: 18,
     color: colors.lightText

@@ -25,5 +25,16 @@ export default StyleSheet.create({
     ...texts.cardTitle,
     textAlign: 'center',
     padding: 10
+  },
+  subTitle: {
+    ...texts.cardSubTitle,
+    textAlign: 'center',
+    padding: 10,
+    elevation: 3
+  },
+  description: {
+    textAlign: 'center',
+    padding: 10,
+    elevation: 3
   }
 })
