@@ -24,7 +24,7 @@ function StatsListItem ({ pet }) {
     }}
     >
       <ItemSeparator />
-      <View style={styles.dishesCard}>
+      <View style={styles.petsCard}>
         {pet.imgUrl &&
           <Image
             style={styles.image}

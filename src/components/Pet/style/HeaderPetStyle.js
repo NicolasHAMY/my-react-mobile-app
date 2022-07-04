@@ -4,7 +4,7 @@ import colors from '../../../style/Colors'
 export default StyleSheet.create({
   headerImage: {
     width: '100%',
-    height: 200
+    height: 300
   },
   backdrop: {
     height: '100%',

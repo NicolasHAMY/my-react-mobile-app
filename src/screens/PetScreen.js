@@ -6,13 +6,13 @@ import PetDetails from '../components/Pet/PetDetails'
 import { getPetById } from '../services/Api'
 
 function PetScreen ({ route, navigation }) {
-  const [pet, setpet] = useState()
+  const [pet, setPet] = useState()
   const { id } = route.params
 
   useEffect(() => {
     const getData = async () => {
       const data = await getPetById(id)
-      setpet(data)
+      setPet(data)
       navigation.setOptions({ title: data.title })
     }
     getData()

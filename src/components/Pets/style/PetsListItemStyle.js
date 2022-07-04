@@ -16,6 +16,6 @@ export default StyleSheet.create({
     paddingVertical: 10
   },
   image: {
-    height: 200
+    height: 300
   }
 })
