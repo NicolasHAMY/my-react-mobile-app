@@ -1,5 +1,7 @@
 import { Image, ScrollView, useColorScheme, View } from 'react-native'
 import { Colors } from 'react-native/Libraries/NewAppScreen'
+import Dofus from '../components/Dofus'
+import styles from '../style/HomePageStyle'
 
 function HomeScreen () {
   const isDarkMode = useColorScheme() === 'dark'
@@ -19,11 +21,12 @@ function HomeScreen () {
         }}
       >
         <Image
-          // style={styles.image}
-          source={require('../images/osatopia.jpg')}
+          style={styles.image}
+          source={require('../images/eniripsa.png')}
           resizeMode='cover'
         />
       </View>
+      <Dofus />
 
     </ScrollView>
   )
