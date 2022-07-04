@@ -5,6 +5,7 @@ import PetsScreen from '../screens/PetsScreen'
 import colors from '../style/Colors'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import PetScreen from '../screens/PetScreen'
+import CameraScreen from '../screens/CameraScreen'
 
 const TabNavigator = createBottomTabNavigator()
 
@@ -34,6 +35,9 @@ const MainNavigator = () => {
             case ('Pets'):
               iconName = 'pets'
               break
+            case ('Camera'):
+              iconName = 'camera-alt'
+              break
             default:
               break
           }
@@ -52,6 +56,7 @@ const MainNavigator = () => {
           headerShown: false
         }}
       />
+      <TabNavigator.Screen name='Camera' component={CameraScreen} />
     </TabNavigator.Navigator>
   )
 }
